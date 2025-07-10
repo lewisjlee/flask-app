@@ -25,10 +25,6 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover tests
-    
-    - name: Build Docker image
-      run: |
-        docker build -t flask-app:latest .
  
     - name: Get current time
       run: echo "CURRENT_TIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
